@@ -19,6 +19,9 @@ let loader = {
                     if (!this.loaded.includes(component_name)) {
                         $("head").append(`<link rel="stylesheet" href="` + COMPONENT_DIR + `/${component_name}.css">`);
                         $("head").append(`<script src="` + COMPONENT_DIR + `/${component_name}.js">`);
+                        // $.getScript(COMPONENT_DIR + `/${component_name}.js`, function() {
+                        //     console.log(`${component_name}.js loaded and executed`);
+                        // });
                     }
                     this.loaded.push(component_name);
                 } else {
